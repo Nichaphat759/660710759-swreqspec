@@ -16,7 +16,7 @@
 - ไฟล์ที่แตะ: backend/app/config.py, backend/app/db/models.py, backend/app/db/session.py, backend/app/db/migrations/001_init.py
 - ต้องทำหลัง: ไม่มี
 - เสร็จเมื่อ: migration สร้างตาราง slots, bookings และ audit_logs ได้พร้อมใช้งานและเชื่อม PostgreSQL ได้ผ่านค่า DATABASE_URL อย่างถูกต้อง
-- สถานะ: พร้อมทำ
+- สถานะ: เสร็จ รอทีมตรวจ
 
 ### T-02 สร้าง API /slots และคำนวณช่วงว่าง
 - รองรับ: FR-BKG-01, FR-BKG-06, NFR-PERF-01, CON-TECH-01

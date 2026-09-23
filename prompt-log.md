@@ -102,3 +102,14 @@
 - Q-02 เรื่องรูปแบบเลขคิวเป็น Open Question จึงต้องไม่มีการสันนิษฐานว่าเป็น A001 หรือรูปแบบใด ๆ
 
 ---
+
+## 2569-09-23 10:05 คำสั่ง: /implement T-01
+
+- เครื่องมือ: Copilot ใน Codespaces
+- ไฟล์: specs/001-booking/tasks.md
+- ไฟล์ที่สร้าง/แก้: backend/app/config.py, backend/app/db/session.py, backend/app/db/__init__.py, backend/app/db/migrations/__init__.py, backend/app/db/migrations/001_init.py, backend/app/__init__.py, backend/tests/test_T_01_schema.py
+- ผลทดสอบ: pytest tests/test_T_01_schema.py -q -> 2 passed in 0.58s
+- สิ่งที่เกือบต้องเดา: ไม่มี; ใช้เทคโนโลยีจาก plan.md: SQLAlchemy + SQLite ในหน่วยความจำสำหรับ test และใช้ DATABASE_URL ตามข้อกำหนด
+- ข้อสังเกต: task T-01 อยู่ในสถานะ "เสร็จ รอทีมตรวจ" หลังรัน test ผ่านแล้ว
+
+---
