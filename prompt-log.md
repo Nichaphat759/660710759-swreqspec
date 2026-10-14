@@ -52,3 +52,13 @@
 - เครื่องมือ: Copilot ใน Codespaces (Agent, Auto)
 - ผลลัพธ์: สร้างแถว test cases สำหรับ AC-BKG-01 ใน specs/001-booking/test-cases.md จำนวน 3 แถว สถานะ "ร่าง"
 - หมายเหตุ: รูปแบบหมายเลขคิวยังติด Q-02 จึงเขียนให้เป็น "(รอ Q-02)" ใน Then ของทุกแถว และยังไม่เขียนโค้ด test เนื่องจาก AC ยังอยู่ในโหมดร่าง
+
+---
+
+## 2569-10-14 06:38 คำสั่ง: /verify specs/001-booking/
+
+- เครื่องมือ: Copilot ใน Codespaces (Agent, Auto)
+- ผล test: backend pytest 4 passed, frontend vitest 1 passed (รวม 5/5 ผ่าน)
+- ผลตรวจ: สร้าง RTM ใหม่ใน specs/001-booking/rtm.md
+- F-ID ใหม่: F-001, F-002, F-003, F-004, F-005, F-006, F-007, F-008
+- หมายเหตุ: หลักฐานความไม่ครบอยู่ที่ตัวเลข 14 วันแทน 30 วัน, ขาดการกันจองซ้ำวันเดียวกัน, ไม่มีช่วงเวลาพร้อม 3 ตัวเลือก, ไม่มี audit log middleware, ไม่มี queue retry และค่าเริ่มต้น DATABASE_URL เป็น SQLite
