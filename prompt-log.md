@@ -62,3 +62,13 @@
 - ผลตรวจ: สร้าง RTM ใหม่ใน specs/001-booking/rtm.md
 - F-ID ใหม่: F-001, F-002, F-003, F-004, F-005, F-006, F-007, F-008
 - หมายเหตุ: หลักฐานความไม่ครบอยู่ที่ตัวเลข 14 วันแทน 30 วัน, ขาดการกันจองซ้ำวันเดียวกัน, ไม่มีช่วงเวลาพร้อม 3 ตัวเลือก, ไม่มี audit log middleware, ไม่มี queue retry และค่าเริ่มต้น DATABASE_URL เป็น SQLite
+
+---
+
+## 2569-10-14 06:47 คำสั่ง: /verify specs/001-booking/
+
+- เครื่องมือ: Copilot ใน Codespaces (Agent, Auto)
+- ผล test: backend pytest 4 passed; frontend npm test 3 passed; รวม 7 passed, 0 failed (มี React act warning ใน setup.test.jsx)
+- ผลตรวจ: อัปเดต RTM; สถานะตามรอยไปข้างหน้า ช่องโหว่ 8, ยังไม่ถึง 7, รอ Q-xx 0
+- F-ID ใหม่: F-009 ถึง F-016 (พบ endpoint ยกเลิกที่อยู่ใน Out of scope, test assertions ไม่ครอบคลุม AC, benchmark ไม่ได้จำลอง concurrency, national_id ถูก log, ไม่มี test ปฏิเสธคำขอที่ไม่ยืนยันตัวตน, หน้าเลือกเวลาไม่ตรงข้อกำหนด UI และ backend ยังยอมจองช่วงที่เหลือ 0 ที่นั่ง)
+- ทบทวนผลเดิม: F-003 ส่วน UI แก้แล้วจากข้อความ "เต็มแล้ว" เป็น "ช่วงเวลาเต็ม" และแสดงทางเลือกได้สูงสุด 3 รายการ; F-002, F-004, F-006 ไม่จัดเป็นข้อค้นพบรอบนี้เพราะ task ที่เกี่ยวข้องยังไม่เสร็จ
